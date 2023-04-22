@@ -14,8 +14,8 @@ function check(){
     var userPw = document.getElementById('password');
 
     if(userName.value == storedName && userPw.value == storedPw){
-
-        alert('You are logged in.');
+        window.location.assign("./resumePage.html")
+        
     }else{
         alert('Invalid username/password');
         document.getElementById("login-page-container").innerHTML = 
