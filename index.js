@@ -26,3 +26,25 @@ function check(){
         </form>`
     }
 }
+
+//GET JSON DATA
+fetch("./Data.json")
+  .then((response) => response.json())
+  .then( value => console.log(value))
+  .catch((error) => console.log(error.message));
+
+
+
+
+
+//GET JSON DATA
+  const fetchData = async() => {
+    try {
+        const response = await fetch("./Data.json");
+        const data1 = await response.json();
+        console.log(data1);
+    } catch (error) {
+        console.log(error.message)
+    }
+  };
+  fetchData();
